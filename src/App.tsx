@@ -100,7 +100,8 @@ function App() {
 
   const checkData = (data: IWord[] | IErrorResult) => {
     if ("title" in data) return setIsNotFound(true)
-    return setWordData(data[0])
+    setIsNotFound(false)
+    setWordData(data[0])
   }
 
   useEffect(() => {
