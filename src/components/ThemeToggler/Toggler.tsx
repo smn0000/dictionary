@@ -1,5 +1,5 @@
 import { ThemeContext } from "../../ThemeContext"
-import { ChangeEvent, FormEvent, useContext } from "react"
+import { ChangeEvent, useContext } from "react"
 import "./styles.scss"
 
 const Toggler = () => {

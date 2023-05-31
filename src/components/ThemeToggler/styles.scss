@@ -24,6 +24,9 @@
   height: 100%;
   z-index: 1;
   transform: translateY(-3px) translateX(-3px);
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .toggler__ball {

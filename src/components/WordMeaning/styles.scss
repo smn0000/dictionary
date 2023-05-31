@@ -1,0 +1,77 @@
+@use "../../scss/variables.scss";
+.word__meaning {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &.light {
+    .line {
+      background-color: variables.$clr-line-light;
+    }
+  }
+  &.dark {
+    .line {
+      background-color: variables.$clr-line-dark;
+    }
+  }
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.word__meaning__partofspeech {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  font-style: italic;
+}
+.word__meaning__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-inline: 15px;
+
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background-color: variables.$clr-purple;
+      border-radius: 50%;
+      position: absolute;
+      top: 9px;
+      left: 0;
+    }
+  }
+}
+
+.word__meaning__subtitle {
+  color: variables.$clr-text-grey;
+}
+
+.word__meaning__synonyms {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.word__meaning__synonym {
+  color: variables.$clr-purple;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.word__meaning__example {
+  color: variables.$clr-text-grey;
+}

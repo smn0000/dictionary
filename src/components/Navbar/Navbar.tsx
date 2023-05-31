@@ -4,7 +4,7 @@ import "./styles.scss"
 import FontSelect from "../FontSelect/FontSelect"
 import Toggler from "../ThemeToggler/Toggler"
 const Navbar = () => {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
 
   return (
     <nav className={`nav ${theme}`}>

@@ -1,0 +1,17 @@
+@use "../../scss/variables.scss";
+.source {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.source__heading {
+  color: variables.$clr-text-grey;
+}
+
+.source__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: inherit;
+}

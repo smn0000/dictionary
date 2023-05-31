@@ -1,20 +1,6 @@
 @use "./reset.scss";
 @use "./variables.scss";
 
-.wrapper {
-  width: 50%;
-  padding-block: 2rem;
-  margin: auto;
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    padding: 2rem;
-  }
-  @media (max-width: 768px) {
-    padding: 1rem 0.5rem;
-  }
-}
-
 body {
   font-size: 18px;
   line-height: 24px;
@@ -23,24 +9,32 @@ body {
 .text-small {
   font-size: 14px;
   line-height: 17px;
+  text-decoration: underline;
 }
 
 .heading {
+  font-weight: bold;
   &.large {
     font-size: 64px;
-    font-weight: bold;
     line-height: 77px;
+
+    @media (max-width: 425px) {
+      font-size: 48px;
+    }
+    @media (max-width: 345px) {
+      font-size: 36px;
+    }
   }
 
   &.medium {
     font-size: 24px;
-    font-weight: bold;
     line-height: 29px;
   }
 
   &.small {
     font-size: 20px;
     line-height: 24px;
+    font-weight: 400;
   }
 }
 

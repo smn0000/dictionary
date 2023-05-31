@@ -1,0 +1,37 @@
+@use "../../scss/variables.scss";
+
+.input__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  border-radius: 1rem;
+  &.light {
+    background-color: variables.$clr-fill-light;
+  }
+
+  &.dark {
+    background-color: variables.$clr-fill-dark;
+  }
+}
+
+.input {
+  color: inherit;
+  font: inherit;
+  flex: 1;
+  height: 64px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.input__button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  aspect-ratio: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
