@@ -9,6 +9,7 @@ const Toggler = () => {
       <input
         type="checkbox"
         className="toggler"
+        defaultChecked={theme === "dark"}
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           e.target.checked ? setTheme("dark") : setTheme("light")
         }
