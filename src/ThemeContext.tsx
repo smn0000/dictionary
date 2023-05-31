@@ -1,7 +1,7 @@
 import { createContext, useState } from "react"
 
-type TTheme = "light" | "dark"
-type TFont = "sans" | "serif" | "mono"
+export type TTheme = "light" | "dark"
+export type TFont = "sans" | "serif" | "mono"
 
 export const ThemeContext = createContext<any>({ theme: "light", undefined })
 

@@ -1,0 +1,32 @@
+@use "../../scss/variables.scss";
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+
+  &.light {
+    .nav__separator {
+      background-color: variables.$clr-line-light;
+    }
+  }
+  &.dark {
+    .nav__separator {
+      background-color: variables.$clr-line-dark;
+    }
+    .nav__moon {
+      stroke: variables.$clr-purple;
+    }
+  }
+}
+
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav__separator {
+  width: 1px;
+  height: 28px;
+}

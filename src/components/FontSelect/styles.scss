@@ -1,0 +1,51 @@
+@use "../../scss/variables.scss";
+
+.select__wrapper {
+  position: relative;
+
+  &.light {
+    .select__dropdown {
+      background-color: variables.$bg-light;
+      box-shadow: 0 5px 30px rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+
+  &.dark {
+    .select__dropdown {
+      background-color: variables.$clr-fill-dark;
+      box-shadow: 0 5px 30px variables.$clr-purple;
+    }
+  }
+}
+
+.select {
+  text-transform: capitalize;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.select__dropdown {
+  white-space: nowrap;
+  position: absolute;
+  padding: 1rem;
+  padding-right: 2.5rem;
+  right: 0;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &.hidden {
+    display: none;
+  }
+
+  div {
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      color: variables.$clr-purple;
+    }
+  }
+}

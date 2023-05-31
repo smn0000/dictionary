@@ -1,10 +1,17 @@
 import Navbar from "./components/Navbar/Navbar"
 import { ThemeContext } from "./ThemeContext"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 function App() {
   const { theme, font } = useContext(ThemeContext)
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.body.style.backgroundColor = "#050505"
+    } else document.body.style.backgroundColor = "#ffffff"
+  }, [theme])
+
   return (
-    <div className={`${theme} ${font}`}>
+    <div className={`wrapper ${theme} ${font}`}>
       <Navbar />
       <main>
         <h1>Lorem</h1>

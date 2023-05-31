@@ -1,29 +1,15 @@
 import { ThemeContext } from "../../ThemeContext"
 import { useContext } from "react"
 import "./styles.scss"
-
+import FontSelect from "../FontSelect/FontSelect"
+import Toggler from "../ThemeToggler/Toggler"
 const Navbar = () => {
-  const { theme, setTheme, setFont } = useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext)
 
-  const handleFontSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const option = e.target.selectedIndex
-    switch (option) {
-      case 0:
-        setFont("sans")
-        break
-      case 1:
-        setFont("serif")
-        break
-      case 2:
-        setFont("mono")
-        break
-      default:
-        break
-    }
-  }
   return (
-    <div>
+    <nav className={`nav ${theme}`}>
       <svg
+        className="nav__logo"
         xmlns="http://www.w3.org/2000/svg"
         width="34"
         height="38"
@@ -41,15 +27,28 @@ const Navbar = () => {
           <path d="M11 9h12" />
         </g>
       </svg>
-      <select name="font" id="font" onChange={handleFontSelect}>
-        <option value="">Sans Serif</option>
-        <option value="">Serif</option>
-        <option value="">Mono</option>
-      </select>
-      <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-        Theme
-      </button>
-    </div>
+      <div className="nav__buttons">
+        <FontSelect />
+        <div className="nav__separator"></div>
+        <Toggler />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+        >
+          <path
+            className="nav__moon"
+            fill="none"
+            stroke="#838383"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.5"
+            d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"
+          />
+        </svg>
+      </div>
+    </nav>
   )
 }
 

@@ -1,6 +1,30 @@
 @use "./reset.scss";
 @use "./variables.scss";
 
+.wrapper {
+  width: 50%;
+  padding-block: 2rem;
+  margin: auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 2rem;
+  }
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+body {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.text-small {
+  font-size: 14px;
+  line-height: 17px;
+}
+
 .heading {
   &.large {
     font-size: 64px;
