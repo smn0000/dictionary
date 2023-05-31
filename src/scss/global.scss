@@ -1,0 +1,43 @@
+@use "./reset.scss";
+@use "./variables.scss";
+
+.heading {
+  &.large {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 77px;
+  }
+
+  &.medium {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 29px;
+  }
+
+  &.small {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.light {
+  background-color: variables.$bg-light;
+  color: variables.$clr-text-light;
+}
+
+.dark {
+  background-color: variables.$bg-dark;
+  color: variables.$clr-text-dark;
+}
+
+.sans {
+  font-family: "Inter";
+}
+
+.serif {
+  font-family: "Lora";
+}
+
+.mono {
+  font-family: "Inconsolata";
+}
