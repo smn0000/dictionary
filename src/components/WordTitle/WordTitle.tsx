@@ -7,18 +7,19 @@ const WordTitle = ({
   word: string
   phonetics: IPhonetics[]
 }) => {
+  console.log(phonetics[0])
   const playAudio = () => {
-    const audio = new Audio(phonetics[0].audio)
+    const audio = new Audio(phonetics[0] && phonetics[0].audio)
     audio.play()
   }
   return (
     <div className="word__title">
       <div className="word__title__left">
         <p className="heading large">{word}</p>
-        <p className="word__title__text">{phonetics[0].text}</p>
+        <p className="word__title__text">{phonetics[0] && phonetics[0].text}</p>
       </div>
       <div className="word__title__right">
-        {phonetics[0].audio && (
+        {phonetics[0] && (
           <button onClick={playAudio} className="word__title__play">
             <svg
               xmlns="http://www.w3.org/2000/svg"
