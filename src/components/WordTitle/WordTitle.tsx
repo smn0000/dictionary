@@ -19,7 +19,7 @@ const WordTitle = ({
         <p className="word__title__text">{phonetics[0] && phonetics[0].text}</p>
       </div>
       <div className="word__title__right">
-        {phonetics[0] && (
+        {phonetics[0] && phonetics[0].audio && (
           <button onClick={playAudio} className="word__title__play">
             <svg
               xmlns="http://www.w3.org/2000/svg"
